@@ -1,5 +1,6 @@
 import React, { Component }from 'react'
 import Layout from '@components/view/Layout'
+import { Button } from 'antd';
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import Router, { withRouter } from 'next/router'
@@ -26,6 +27,7 @@ class Index extends Component {
   render() {
     return (
 			<Layout>
+				<Button type="primary">点击</Button>
 			</Layout>
     )
   }
