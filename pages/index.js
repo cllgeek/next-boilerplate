@@ -1,36 +1,36 @@
-import React, { Component }from 'react'
-import Layout from '@components/view/Layout'
-import { Button } from 'antd';
-import Link from 'next/link'
-import dynamic from 'next/dynamic'
-import Router, { withRouter } from 'next/router'
-import { inject, observer } from 'mobx-react';
-import config from '../config'
+import React, { Component } from "react";
+import Layout from "@components/view/Layout";
+import { Button } from "antd";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+import Router, { withRouter } from "next/router";
+import { inject, observer } from "mobx-react";
+import config from "../config";
 
-@inject('homeStore')
+@inject("homeStore")
 @observer
 class Index extends Component {
-  static getInitialProps ({ req }) {
-    console.log('------getInitialProps--Index-----')
-    return {isServer: !!req}
-  }
+	static getInitialProps({ req }) {
+		console.log("------getInitialProps--Index-----");
+		return { isServer: !!req };
+	}
 
-  constructor (props) {
-    console.log('------constructor--Index-----')
-    super(props)
-  }
+	constructor(props) {
+		console.log("------constructor--Index-----");
+		super(props);
+	}
 
-  componentDidMount(){
+	componentDidMount() {}
 
-  }
-
-  render() {
-    return (
+	render() {
+		return (
 			<Layout>
-				<Button type="primary">点击</Button>
+				<Button type="primary" onClick={() => console.log("hello, next")}>
+					点击
+				</Button>
 			</Layout>
-    )
-  }
+		);
+	}
 }
 
-export default withRouter(Index)
+export default withRouter(Index);
